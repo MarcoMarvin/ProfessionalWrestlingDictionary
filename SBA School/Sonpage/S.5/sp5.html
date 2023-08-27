@@ -1,0 +1,345 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wrestling Game</title>
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #000; /* 修改背景顏色 */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+
+  .container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .navbar {
+    background-color: #000; /* 修改導覽列背景顏色 */
+    height: 60px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .navbar img {
+    height: 220%;
+ margin-right: 120px;
+margin-top: 90px;
+
+  }
+
+  .nav-item {
+    color: #fff; /* 修改導覽列字體顏色為白色 */
+    text-decoration: none;
+    font-size: 1.4rem;
+    padding: 50px 20px;
+    transition: color 0.2s;
+margin-top: 70px;
+  }
+
+  .nav-item:hover {
+    color: red; /* 修改滑鼠懸停時的導覽列字體顏色為紅色 */
+  }
+
+  .content {
+    display: flex;
+    flex: 1;
+  }
+
+  .sidebar {
+    width: 12%;
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: #000; /* 修改側邊欄背景顏色 */
+    padding-top: 80px;
+  }
+
+  .button {
+    background-color: #fff; /* 修改按鈕顏色 */
+    color: #000; /* 修改字體顏色 */
+    padding: 15px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1.8rem;
+    margin: 12px;
+    cursor: pointer;
+    border-radius: 150px; /* 添加橢圓形按鈕 */
+    width: 150px; /* 增大按鈕尺寸 */
+    transition: background-color 0.2s, color 0.2s;
+
+  }
+
+  .button:hover {
+    background-color: #aabb00s;
+    color: #abc;
+  }
+
+  .text-area {
+    display: flex;
+    flex-direction: column;
+    width: 60%; /* 修改文本區域寬度 */
+    padding: 30px;
+    flex: 1;
+
+  }
+
+  .text-area > div {
+    background-color: #999; /* 修改文本區域背景顏色 */
+    color: #fff; /* 修改文本區域文字顏色 */
+    margin-bottom: 50px;
+ margin-top: 50px;
+ margin-left:110px;
+margin-right:110px;
+    flex: 1;
+    padding: 16px;
+    overflow-wrap: break-word;
+    border-radius: 8px; /* 添加圓角 */
+  }
+
+  .text-area-1 {
+    flex: 8;
+  }
+
+  .text-area-2 {
+    flex: 4;
+  }
+
+  .text-area-3 {
+    flex: 7;
+  }
+
+
+  .footer {
+    background-color: #333; /* 修改頁尾背景顏色 */
+    color: #fff; /* 修改頁尾文字顏色 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+  }
+
+
+
+
+		#game-board {
+			display: grid;
+			grid-template-columns: repeat(10, 40px);
+			grid-template-rows: repeat(20, 40px);
+			grid-gap: 1px;
+			background-color: #ccc;
+			border: 1px solid #999;
+			padding: 10px;
+			margin: 0 auto;
+		}
+
+		.block {
+			width: 40px;
+			height: 40px;
+			background-color: #333;
+			border-radius: 5px;
+		}
+	</style>
+</head>
+<body>
+  <div class="container">
+    <nav class="navbar">
+      <a href="#" class="nav-item" onclick="window.location.href='C:/Users/User/Desktop/SBA School/SBAABC.html'">HOMEPAGE</a>
+      <a href="#" class="nav-item" onclick="window.location.href='C:/Users/User/Desktop/SBA School/Sonpage/S.1/sp1.html'">Pro-Wrestling Introduction</a>
+      <a href="#" class="nav-item" onclick="window.location.href='C:/Users/User/Desktop/SBA School/Sonpage/S.2/sp2.html'">Wrestling Company Introduction</a>
+      <a href="#" class="nav-item"  onclick="window.location.href='C:/Users/User/Desktop/SBA School/Sonpage/S.3/sp3.html'">Wrestler Roster</a> 
+      <a href="#" class="nav-item"  onclick="window.location.href='C:/Users/User/Desktop/SBA School/Sonpage/S.4/sp4.html'">Wrestling Quiz</a> 
+    </nav>
+  <div class="content">
+      <aside class="sidebar">
+        <a href="#" class="button"   >GAME1</a>
+        <a href="#" class="button"   onclick="window.location.href='C:/Users/User/Desktop/SBA School/Sonpage/S.5/sp5.2.html'">GAME2</a>
+        <a href="#" class="button">GAME3</a>
+
+      </aside>
+     <div class="text-area">
+        <div class="text-area-1">  
+   <div id="game-board"></div>
+	<script>
+		// 定義遊戲板
+		const BOARD_WIDTH = 10;
+		const BOARD_HEIGHT = 20;
+		const board = new Array(BOARD_HEIGHT).fill(null).map(() => new Array(BOARD_WIDTH).fill(0));
+
+		// 定義方塊種類
+		const blocks = [
+			[[1, 1], [1, 1]], // 方塊
+			[[0, 1, 0], [1, 1, 1]], // L形塊
+			[[0, 1, 1], [1, 1, 0]], // 反L形塊
+			[[1, 1, 0], [0, 1, 1]], // Z形塊
+			[[0, 1, 1], [1, 1, 0]], // 反Z形塊
+			[[1, 1, 1], [0, 1, 0]], // T形塊
+			[[0, 0, 1], [1, 1, 1]], // 竖長條
+		];
+
+		// 隨機生成方塊
+		function generateBlock() {
+			const blockIndex = Math.floor(Math.random() * blocks.length);
+			const block = blocks[blockIndex];
+			const y = -block.length;
+			const x = Math.floor((BOARD_WIDTH - block[0].length) / 2);
+			return { block, x, y };
+		}
+
+		// 渲染遊戲板
+		function render() {
+			// 清空遊戲板
+			document.getElementById('game-board').innerHTML = '';
+
+			// 渲染方塊
+			const { block, x, y } = currentBlock;
+			block.forEach((row, i) => {
+				row.forEach((value, j) => {
+					if (value) {
+						const blockElement = document.createElement('div');
+						blockElement.classList.add('block');
+						blockElement.style.gridColumnStart = x + j + 1;
+						blockElement.style.gridRowStart = y + i + 1;
+						document.getElementById('game-board').appendChild(blockElement);
+					}
+				});
+			});
+
+			// 渲染已固定方塊
+			board.forEach((row, i) => {
+				row.forEach((value, j) => {
+					if (value) {
+						const blockElement = document.createElement('div');
+						blockElement.classList.add('block');
+						blockElement.style.gridColumnStart = j + 1;
+						blockElement.style.gridRowStart = i + 1;
+						document.getElementById('game-board').appendChild(blockElement);
+					}
+				});
+			});
+		}
+
+		// 判斷方塊是否可以移動
+		function canMove(block, x, y) {
+			return block.every((row, i) => {
+				return row.every((value, j) => {
+					const newX = x + j;
+					const newY = y + i;
+					if (newX < 0 || newX >= BOARD_WIDTH || newY >= BOARD_HEIGHT) {
+						return false;
+					}
+					if (newY < 0) {
+						return true;
+					}
+					return !board[newY][newX];
+				});
+			});
+		}
+
+		// 固定方塊
+		function fixBlock(block, x, y) {
+			block.forEach((row, i) => {
+				row.forEach((value, j) => {
+					if (value) {
+						board[y + i][x + j] = 1;
+					}
+				});
+			});
+		}
+
+		// 消除滿行
+		function clearLines() {
+			let linesCleared= 0;
+			for (let i = BOARD_HEIGHT - 1; i >= 0; i--) {
+				if (board[i].every(value => value)) {
+					board.splice(i, 1);
+					board.unshift(new Array(BOARD_WIDTH).fill(0));
+					linesCleared++;
+					i++;
+				}
+			}
+			return linesCleared;
+		}
+
+		// 遊戲結束
+		function endGame() {
+			clearInterval(gameLoop);
+			alert('遊戲結束');
+		}
+
+		// 遊戲循環
+		let currentBlock = generateBlock();
+		let gameLoop = setInterval(() => {
+			if (canMove(currentBlock.block, currentBlock.x, currentBlock.y + 1)) {
+				currentBlock.y++;
+			} else {
+				fixBlock(currentBlock.block, currentBlock.x, currentBlock.y);
+				const linesCleared = clearLines();
+				if (linesCleared) {
+					alert(`消除了 ${linesCleared} 行`);
+				}
+				if (board[0].some(value => value)) {
+					endGame();
+				} else {
+					currentBlock = generateBlock();
+				}
+			}
+			render();
+		}, 500);
+
+		// 監聽鍵盤事件
+		document.addEventListener('keydown', event => {
+			switch (event.key) {
+				case 'ArrowLeft':
+					if (canMove(currentBlock.block, currentBlock.x - 1, currentBlock.y)) {
+						currentBlock.x--;
+						render();
+					}
+					break;
+				case 'ArrowRight':
+					if (canMove(currentBlock.block, currentBlock.x + 1, currentBlock.y)) {
+						currentBlock.x++;
+						render();
+					}
+					break;
+				case 'ArrowDown':
+					if (canMove(currentBlock.block, currentBlock.x, currentBlock.y + 1)) {
+						currentBlock.y++;
+						render();
+					}
+					break;
+				case 'ArrowUp':
+					const rotatedBlock = currentBlock.block[0].map((_, index) =>
+						currentBlock.block.map(row => row[index]).reverse()
+					);
+					if (canMove(rotatedBlock, currentBlock.x, currentBlock.y)) {
+						currentBlock.block = rotatedBlock;
+						render();
+					}
+					break;
+			}
+		});
+	</script>
+
+ </div>
+      </div class>
+  </div>
+  <footer class="footer">頁尾</footer>
+</body>
+</html>
+
