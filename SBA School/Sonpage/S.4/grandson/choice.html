@@ -19,7 +19,7 @@
 <style>
 body{
   font-size: 20px;
-  font-family: sans-serif;
+  font-family: fantasy;
   color: #333;
 }
 .question{
@@ -31,99 +31,115 @@ body{
 #submit{
   font-family: sans-serif;
   font-size: 10px;
-  background-color: purple;
+  background-color: #D6BD68;
   color: #fff;
   border: 0px;
   border-radius: 40px;
   padding: 15px;
   cursor: pointer;
   margin-bottom: 15px;
+font-family: fantasy;
 }
 #submit:hover{
-  background-color: #A375E8;
+  background-color: #C5AC57;
 }
 </style>
 <script>
 
 var myQuestions = [
   {
-    question: "Which wrestler use this entrance music?",
+    question: "1. Which wrestler use this entrance music 'Viper!' ?",
 
     answers: {
       a: 'Booker-T',
-      b: 'Harry Porter',
-      c: 'Harry Styles',
+      b: 'Big Show',
+      c: 'Cody Rhodes',
       d: 'Randy Orton'
     },
     correctAnswer: 'd'
   },  {
-    question: "Is Vito Gay ?",
+    question: "2. How old is Seth Rollins ?",
     answers: {
-      a: '56',
-      b: '72',
-      c: '65'
+      a: '28',
+      b: '38',
+      c: '27',
+	d: '37'
     },
-    correctAnswer: 'a'
+    correctAnswer: 'd'
   },  {
-    question: "Is Vito Gay ?",
+    question: "3. Who is the couple of Becky Lynch ?",
     answers: {
-      a: '72',
-      b: '56',
-      c: '11'
-    },
-    correctAnswer: 'b'
-  },  {
-    question: "Is Vito Gay ?",
-    answers: {
-      a: '40',
-      b: '5',
-      c: '2'
-    },
-    correctAnswer: 'b'
-  },
-  {
-    question: "Is Vito Gay ?",
-    answers: {
-      a: '3',
-      b: '5',
-      c: '10'
+      a: 'Roman Reigns',
+      b: 'Goldberg',
+      c: 'Seth Rollins',
+d: 'Big E'
     },
     correctAnswer: 'c'
+  },  {
+    question: "4. Who is the firt WWE Universal champion ?",
+    answers: {
+      a: 'Finn Balor',
+      b: 'Seth Rollins',
+      c: 'AJ Styles'
+,d: 'Block lesnar'
+    },
+    correctAnswer: 'a'
+  },
+  {
+    question: "5. Who is the brother of The Undertaker ?",
+    answers: {
+      a: 'Kane',
+      b: 'Blue Kane',
+      c: 'Karrion Kross',
+d: 'Triple H'
+    },
+    correctAnswer: 'a'
   } , {
-    question: "Is Vito Gay ?",
+    question: "6. Is Shinsuke Nakamura the former WWE Champion ?",
     answers: {
-      T: 'True',
-      F: 'False',
+      a: 'Yes',
+      b: 'No',
+      c: 'yes but has been disqualified'
+     
+
          },
-    correctAnswer: 'T'
+    correctAnswer: 'b'
   }, {
-    question: "Is Wall-E May ?",
+    question: "7. Is Kenny Omega in WWE now or in the pass?",
     answers: {
-      T: 'True',
-      F: 'False',
+      a: 'Yes ,he is still in WWE as a wrestler',
+      b: 'No',
+      c: 'Yes,but he has quit already',
+      d: 'Yes,he is still in WWE as the CEO '
          },
-    correctAnswer: 'F'
+    correctAnswer: 'b'
   }, {
-    question: "Is Henery Day ?",
+    question: "Who is the Hall of Fame ?",
     answers: {
-      T: 'True',
-      F: 'False',
+      a: 'Edge',
+	 b: 'Randy Orton',
+      c: 'MVP',
+      d: 'Shelton Benjamin'
          },
-    correctAnswer: 'T'
+    correctAnswer: 'a'
   }, {
-    question: "Is Jacky lay ?",
+    question: "How many times was John Cena world champion? ?",
     answers: {
-      T: 'True',
-      F: 'False',
+     a: '19',
+      b: '18',
+      c: '17',
+      d: '16 '
          },
-    correctAnswer: 'F'
+    correctAnswer: 'd'
   }, {
-    question: "Is Samson Say ?",
+    question: "Who is not the member of THE S.H.I.E.L.D ?",
     answers: {
-      T: 'True',
-      F: 'False',
+      a: 'Seth Rollins',
+      b: 'Dolph Ziggler',
+      c: 'Roman Reihns',
+      d: 'Dean Ambrose '
          },
-    correctAnswer: 'T'
+    correctAnswer: 'b'
   }
 ];
 
@@ -202,7 +218,7 @@ function generateQuiz(questions, quizContainer, resultsContainer, submitButton){
     }
 
     // show number of correct answers out of total
-    resultsContainer.innerHTML = '答中'+numCorrect + '題,總計 ' + questions.length+"題";
+    resultsContainer.innerHTML = 'Correct : '+numCorrect + ',Total : ' + questions.length;
   }
 
   // show questions right away
