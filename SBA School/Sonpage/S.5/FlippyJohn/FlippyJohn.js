@@ -55,10 +55,10 @@ window.onload = function() {
     }
 
     topPipeImg = new Image();
-    topPipeImg.src = "./toppipe.png";
+    topPipeImg.src = "https://marcomarvin.github.io/ProfessionalWrestlingDictionary/SBA%20School/Sonpage/S.5/FlippyJohn/UP.png";
 
     bottomPipeImg = new Image();
-    bottomPipeImg.src = "./bottompipe.png";
+    bottomPipeImg.src = "https://marcomarvin.github.io/ProfessionalWrestlingDictionary/SBA%20School/Sonpage/S.5/FlippyJohn/DOWN.png";
 
     requestAnimationFrame(update);
     setInterval(placePipes, 1500); //every 1.5 seconds
