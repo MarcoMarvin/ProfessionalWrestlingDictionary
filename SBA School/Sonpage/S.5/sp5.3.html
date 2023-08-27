@@ -1,1 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wrestling Game</title>
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #000; /* 修改背景顏色 */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+
+  .container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .navbar {
+    background-color: #000; /* 修改導覽列背景顏色 */
+    height: 60px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .navbar img {
+    height: 220%;
+ margin-right: 120px;
+margin-top: 90px;
+
+  }
+
+  .nav-item {
+    color: #fff; /* 修改導覽列字體顏色為白色 */
+    text-decoration: none;
+    font-size: 1.4rem;
+    padding: 50px 20px;
+    transition: color 0.2s;
+margin-top: 70px;
+  }
+
+  .nav-item:hover {
+    color: red; /* 修改滑鼠懸停時的導覽列字體顏色為紅色 */
+  }
+
+  .content {
+    display: flex;
+    flex: 1;
+  }
+
+  .sidebar {
+    width: 12%;
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: #000; /* 修改側邊欄背景顏色 */
+    padding-top: 80px;
+  }
+
+  .button {
+    background-color: #fff; /* 修改按鈕顏色 */
+    color: #000; /* 修改字體顏色 */
+    padding: 15px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1.4rem;
+    margin: 12px;
+    cursor: pointer;
+    border-radius: 150px; /* 添加橢圓形按鈕 */
+    width: 150px; /* 增大按鈕尺寸 */
+    transition: background-color 0.2s, color 0.2s;
+
+  }
+
+  .button:hover {
+    background-color: #aabb00s;
+    color: #abc;
+  }
+
+  .text-area {
+    display: flex;
+    flex-direction: column;
+    width: 60%; /* 修改文本區域寬度 */
+    padding: 30px;
+    flex: 1;
+
+  }
+
+  .text-area > div {
+    background-color: #999; /* 修改文本區域背景顏色 */
+    color: #fff; /* 修改文本區域文字顏色 */
+    margin-bottom: 50px;
+ margin-top: 50px;
+ margin-left:110px;
+margin-right:110px;
+    flex: 1.5;
+    padding: 16px;
+    overflow-wrap: break-word;
+    border-radius: 8px; /* 添加圓角 */
+  }
+
+  .text-area-1 {
+    flex: 8;
+  }
+
+  .text-area-2 {
+    flex: 4;
+  }
+
+  .text-area-3 {
+    flex: 7;
+  }
+
+
+  .footer {
+    background-color: #333; /* 修改頁尾背景顏色 */
+    color: #fff; /* 修改頁尾文字顏色 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+  }
+
+
+
+
+		
+	</style>
+</head>
+<body>
+  <div class="container">
+    <nav class="navbar">
+      <a href="#" class="nav-item" onclick="window.location.href='https://marcomarvin.github.io/ProfessionalWrestlingDictionary/SBA School/SBAABC.html'">HOMEPAGE</a>
+      <a href="#" class="nav-item" onclick="window.location.href='https://marcomarvin.github.io/ProfessionalWrestlingDictionary/SBA School/Sonpage/S.1/sp1.html'">Pro-Wrestling Introduction</a>
+      <a href="#" class="nav-item" onclick="window.location.href='https://marcomarvin.github.io/ProfessionalWrestlingDictionary/SBA School/Sonpage/S.2/sp2.html'">Wrestling Company Introduction</a>
+      <a href="#" class="nav-item"  onclick="window.location.href='https://marcomarvin.github.io/ProfessionalWrestlingDictionary/SBA School/Sonpage/S.3/sp3.html'">Wrestler Roster</a> 
+      <a href="#" class="nav-item"  onclick="window.location.href='https://marcomarvin.github.io/ProfessionalWrestlingDictionary/SBA School/Sonpage/S.4/sp4.html'">Wrestling Quiz</a> 
+    </nav>
+  <div class="content">
+      <aside class="sidebar">
+        <a href="#" class="button"   onclick="window.location.href='https://marcomarvin.github.io/ProfessionalWrestlingDictionary/SBA School/Sonpage/S.5/sp5.html'">FlappyJohn</a>
+        <a href="#" class="button"   onclick="window.location.href='https://marcomarvin.github.io/ProfessionalWrestlingDictionary/SBA School/Sonpage/S.5/sp5.2.html'">P.K.B  </a>
+        <a href="#" class="button"   onclick="window.location.href='https://marcomarvin.github.io/ProfessionalWrestlingDictionary/SBA School/Sonpage/S.5/sp5.3.html'">The Viper</a>
+
+      </aside>
+     <div class="text-area">
+        <div class="text-area-1">  <pre>
+				<Font size ="7"><p style="font-family:Fantasy">            The Viper</p></Font>							
+				      <Font size ="6"> 	   </Font>
+
+					
+
+
+ <img src="https://raw.githubusercontent.com/MarcoMarvin/ProfessionalWrestlingDictionary/main/SBA%20School/photos/pphotos/p1.png"  width="350" height='220'><img src="https://raw.githubusercontent.com/MarcoMarvin/ProfessionalWrestlingDictionary/main/SBA%20School/photos/pphotos/p2.png"  width="350" height='220'><img src="https://raw.githubusercontent.com/MarcoMarvin/ProfessionalWrestlingDictionary/main/SBA%20School/photos/pphotos/p3.png"  width="350" height='220'><img src="https://raw.githubusercontent.com/MarcoMarvin/ProfessionalWrestlingDictionary/main/SBA%20School/photos/pphotos/p4.png"  width="300" height='220'>
+
+							
+
+
+
+
+<iframe src="https://marcomarvin.github.io/ProfessionalWrestlingDictionary/SBA%20School/Sonpage/S.5/punch/index.html" width="1300" height="800"></iframe>
+     
+
+ <img src="https://raw.githubusercontent.com/MarcoMarvin/ProfessionalWrestlingDictionary/main/SBA%20School/photos/pphotos/p1.png"  width="350" height='220'><img src="https://raw.githubusercontent.com/MarcoMarvin/ProfessionalWrestlingDictionary/main/SBA%20School/photos/pphotos/p2.png"  width="350" height='220'><img src="https://raw.githubusercontent.com/MarcoMarvin/ProfessionalWrestlingDictionary/main/SBA%20School/photos/pphotos/p3.png"  width="350" height='220'><img src="https://raw.githubusercontent.com/MarcoMarvin/ProfessionalWrestlingDictionary/main/SBA%20School/photos/pphotos/p4.png"  width="300" height='220'>
+</pre>
+</body>
+</html>
+
 
