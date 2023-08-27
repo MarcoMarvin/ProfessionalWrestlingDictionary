@@ -47,6 +47,7 @@ margin-top: 90px;
     padding: 50px 20px;
     transition: color 0.2s;
 margin-top: 70px;
+font-family: fantasy;
   }
 
   .nav-item:hover {
@@ -55,72 +56,112 @@ margin-top: 70px;
 
   .content {
     display: flex;
-    flex: 1;
+    flex: 1; 
   }
 
-  .sidebar {
-    width: 12%;
-    margin-top: 100px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    background-color: #000; /* 修改側邊欄背景顏色 */
-    padding-top: 80px;
-  }
+  
 
-  .button {
-    background-color: #fff; /* 修改按鈕顏色 */
-    color: #000; /* 修改字體顏色 */
-    padding: 15px 20px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 1.8rem;
-    margin: 12px;
-    cursor: pointer;
-    border-radius: 150px; /* 添加橢圓形按鈕 */
-    width: 150px; /* 增大按鈕尺寸 */
-    transition: background-color 0.2s, color 0.2s;
+  
 
-  }
-
-  .button:hover {
-    background-color: #aabb00s;
-    color: #abc;
-  }
+  
 
   .text-area {
     display: flex;
     flex-direction: column;
-    width: 60%; /* 修改文本區域寬度 */
+    width: 100%; /* 修改文本區域寬度 */
     padding: 30px;
     flex: 1;
+	font-family: fantasy;
 
   }
 
   .text-area > div {
     background-color: #999; /* 修改文本區域背景顏色 */
     color: #fff; /* 修改文本區域文字顏色 */
-    margin-bottom: 50px;
+    margin-bottom: 30px;
  margin-top: 50px;
     flex: 1;
     padding: 16px;
     overflow-wrap: break-word;
-    border-radius: 8px; /* 添加圓角 */
+    border-radius: 8px; 
+font-family: fantasy;
+	
   }
 
-  .text-area-1 {
-    flex: 8;
-  }
 
-  .text-area-2 {
-    flex: 4;
-  }
 
-  .text-area-3 {
-    flex: 7;
-  }
+
+
+
+
+
+h1 {
+      text-align: center;
+      color: #333;
+    }
+
+    ul.menu {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-wrap: wrap; /* Added flex-wrap property */
+      justify-content: center; /* Added justify-content property */
+    }
+
+    ul.menu li {
+      margin: 10px; /* Adjusted margin to create spacing between items */
+    }
+
+    ul.menu li a {
+      display: block;
+      padding: 14px 25px;
+      background-color: #333;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: background-color 0.3s;
+
+font-family: fantasy;
+    }
+
+    ul.menu li a:hover {
+      background-color: #555;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
   .footer {
@@ -143,34 +184,193 @@ margin-top: 70px;
       <a href="#" class="nav-item"   onclick="window.location.href='https://marcomarvin.github.io/ProfessionalWrestlingDictionary/SBA School/Sonpage/S.4/sp4.html'">Wrestling Quiz</a> 
       <a href="#" class="nav-item" onclick="window.location.href='https://marcomarvin.github.io/ProfessionalWrestlingDictionary/SBA School/Sonpage/S.5/sp5.html'">Wrestling Game</a> <!-- 新增按鈕 5 -->
     </nav>
-    <div class="content">
-      <aside class="sidebar">
-         <a href="#" class="button">N1</a>
-        <a href="#" class="button">N2</a>
-        <a href="#" class="button">N3</a>
-	<a href="#" class="button">N4</a>
-        <a href="#" class="button">N5</a>
-        <a href="#" class="button">N6</a>
-        <a href="#" class="button">N7</a>
-      </aside>
+    
      <div class="text-area">
-        <div class="text-area-1">  
-<p>Name</p>
+        <div class="text-area-1"> 
+
+ 
+<pre>
 
 
-<video width="640" height="360" controls>
-      <source src="C:\Users\s181044\Downloads/harry-styles-as-it-was-official-video.mp4" type="video/mp4">
-</video>
+		   <Font size='7'>     			  <u>Roster Selects</U></font>
 
 
+<ul class="menu" id="menu-list">
+  </ul>
 
-<p> Entrance music </p>
-<audio controls>
-      <source src="C:\Users\s181044\Downloads/as-it-was-official-video.mp3" type="audio/mp3">
-</audio>
+  <script>
+    // Generate options dynamically
+    var menuList = document.getElementById('menu-list');
+
+    var options = [
+      { label: 'Google', url: 'https://www.google.com' },
+      { label: 'Yahoo!', url: 'https://www.yahoo.com' },
+ { label: 'Google', url: 'https://www.google.com' },
+      { label: 'Yahoo!', url: 'https://www.yahoo.com' },
+      
+ { label: 'Google', url: 'https://www.google.com' },
+      { label: 'Yahoo!', url: 'https://www.yahoo.com' },
+      
+ { label: 'Google', url: 'https://www.google.com' },
+      { label: 'Yahoo!', url: 'https://www.yahoo.com' },
+      
+ { label: 'Google', url: 'https://www.google.com' },
+      { label: 'Yahoo!', url: 'https://www.yahoo.com' },
+      
+ { label: 'Google', url: 'https://www.google.com' },
+      { label: 'Yahoo!', url: 'https://www.yahoo.com' },
+      
+ { label: 'Google', url: 'https://www.google.com' },
+      { label: 'Yahoo!', url: 'https://www.yahoo.com' },
+      
+ { label: 'Google', url: 'https://www.google.com' },
+      { label: 'Yahoo!', url: 'https://www.yahoo.com' },
+      
+ { label: 'Google', url: 'https://www.google.com' },
+      { label: 'Yahoo!', url: 'https://www.yahoo.com' },
+      
+ { label: 'Google', url: 'https://www.google.com' },
+      { label: 'Yahoo!', url: 'https://www.yahoo.com' },
+      
+ { label: 'Google', url: 'https://www.google.com' },
+      { label: 'Yahoo!', url: 'https://www.yahoo.com' },
+{ label: 'Google', url: 'https://www.google.com' },
+      { label: 'Yahoo!', url: 'https://www.yahoo.com' },
+ { label: 'Google', url: 'https://www.google.com' },
+      { label: 'Yahoo!', url: 'https://www.yahoo.com' },
+      
+ { label: 'Google', url: 'https://www.google.com' },
+      { label: 'Yahoo!', url: 'https://www.yahoo.com' },
+      
+ { label: 'Google', url: 'https://www.google.com' },
+      { label: 'Yahoo!', url: 'https://www.yahoo.com' },
+      
+ { label: 'Google', url: 'https://www.google.com' },
+      { label: 'Yahoo!', url: 'https://www.yahoo.com' },
+      
+ { label: 'Google', url: 'https://www.google.com' },
+      { label: 'Yahoo!', url: 'https://www.yahoo.com' },
+      
+ { label: 'Google', url: 'https://www.google.com' },
+      { label: 'Yahoo!', url: 'https://www.yahoo.com' },
+      
+ { label: 'Google', url: 'https://www.google.com' },
+      { label: 'Yahoo!', url: 'https://www.yahoo.com' },
+      
+ { label: 'Google', url: 'https://www.google.com' },
+      { label: 'Yahoo!', url: 'https://www.yahoo.com' },
+      
+ { label: 'Google', url: 'https://www.google.com' },
+      { label: 'Yahoo!', url: 'https://www.yahoo.com' },
+      
+ { label: 'Google', url: 'https://www.google.com' },
+{ label: 'Google', url: 'https://www.google.com' },
+      { label: 'Yahoo!', url: 'https://www.yahoo.com' },
+ { label: 'Google', url: 'https://www.google.com' },
+      { label: 'Yahoo!', url: 'https://www.yahoo.com' },
+      
+ { label: 'Google', url: 'https://www.google.com' },
+      { label: 'Yahoo!', url: 'https://www.yahoo.com' },
+      
+ { label: 'Google', url: 'https://www.google.com' },
+      { label: 'Yahoo!', url: 'https://www.yahoo.com' },
+      
+ { label: 'Google', url: 'https://www.google.com' },
+      { label: 'Yahoo!', url: 'https://www.yahoo.com' },
+      
+ { label: 'Google', url: 'https://www.google.com' },
+      { label: 'Yahoo!', url: 'https://www.yahoo.com' },
+      
+ { label: 'Google', url: 'https://www.google.com' },
+      { label: 'Yahoo!', url: 'https://www.yahoo.com' },
+      
+ { label: 'Google', url: 'https://www.google.com' },
+      { label: 'Yahoo!', url: 'https://www.yahoo.com' },
+      
+ { label: 'Google', url: 'https://www.google.com' },
+      { label: 'Yahoo!', url: 'https://www.yahoo.com' },
+      
+ { label: 'Google', url: 'https://www.google.com' },
+      { label: 'Yahoo!', url: 'https://www.yahoo.com' },
+      
+ { label: 'Google', url: 'https://www.google.com' },
+{ label: 'Google', url: 'https://www.google.com' },
+      { label: 'Yahoo!', url: 'https://www.yahoo.com' },
+ { label: 'Google', url: 'https://www.google.com' },
+      { label: 'Yahoo!', url: 'https://www.yahoo.com' },
+      
+ { label: 'Google', url: 'https://www.google.com' },
+      { label: 'Yahoo!', url: 'https://www.yahoo.com' },
+      
+ { label: 'Google', url: 'https://www.google.com' },
+      { label: 'Yahoo!', url: 'https://www.yahoo.com' },
+      
+ { label: 'Google', url: 'https://www.google.com' },
+      { label: 'Yahoo!', url: 'https://www.yahoo.com' },
+      
+ { label: 'Google', url: 'https://www.google.com' },
+      { label: 'Yahoo!', url: 'https://www.yahoo.com' },
+      
+ { label: 'Google', url: 'https://www.google.com' },
+      { label: 'Yahoo!', url: 'https://www.yahoo.com' },
+      
+ { label: 'Google', url: 'https://www.google.com' },
+      { label: 'Yahoo!', url: 'https://www.yahoo.com' },
+      
+ { label: 'Google', url: 'https://www.google.com' },
+      { label: 'Yahoo!', url: 'https://www.yahoo.com' },
+      
+ { label: 'Google', url: 'https://www.google.com' },
+      { label: 'Yahoo!', url: 'https://www.yahoo.com' },
+      
+ { label: 'Google', url: 'https://www.google.com' },
+{ label: 'Google', url: 'https://www.google.com' },
+      { label: 'Yahoo!', url: 'https://www.yahoo.com' },
+ { label: 'Google', url: 'https://www.google.com' },
+      { label: 'Yahoo!', url: 'https://www.yahoo.com' },
+      
+ { label: 'Google', url: 'https://www.google.com' },
+      { label: 'Yahoo!', url: 'https://www.yahoo.com' },
+      
+ { label: 'Google', url: 'https://www.google.com' },
+      { label: 'Yahoo!', url: 'https://www.yahoo.com' },
+      
+ { label: 'Google', url: 'https://www.google.com' },
+      { label: 'Yahoo!', url: 'https://www.yahoo.com' },
+      
+ { label: 'Google', url: 'https://www.google.com' },
+      { label: 'Yahoo!', url: 'https://www.yahoo.com' },
+      
+ { label: 'Google', url: 'https://www.google.com' },
+      { label: 'Yahoo!', url: 'https://www.yahoo.com' },
+      
+ { label: 'Google', url: 'https://www.google.com' },
+      { label: 'Yahoo!', url: 'https://www.yahoo.com' },
+      
+ { label: 'Google', url: 'https://www.google.com' },
+      { label: 'Yahoo!', url: 'https://www.yahoo.com' },
+      
+ { label: 'Google', url: 'https://www.google.com' },
+      { label: 'Yahoo!', url: 'https://www.yahoo.com' },
+      
+ { label: 'Google', url: 'https://www.google.com' }
+      
+
+      
+    ];
+
+    for (var i = 0; i < options.length; i++) {
+      var option = document.createElement('li');
+      var link = document.createElement('a');
+      link.href = options[i].url;
+      link.textContent = options[i].label;
+      option.appendChild(link);
+      menuList.appendChild(option);
+    }
+  </script>
 
 
-
+</pre>
 
 
  </div>
@@ -178,7 +378,7 @@ margin-top: 70px;
 
  
   </div>
-  <footer class="footer">頁尾</footer>
+  <footer class="footer">MA MAN HO ICT SBA WEBSITE © 2023 Pro-Wrestling Dictionary</footer>
 </body>
 </html>
 
