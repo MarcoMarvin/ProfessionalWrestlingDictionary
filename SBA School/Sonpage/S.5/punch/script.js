@@ -8,7 +8,7 @@ var choices = ["rock", "paper", "scissors"];
 
 window.onload = function() {
     for (let i = 0; i < 3; i++) {
-        // <img id="rock" src="rock.png">
+        // <img id="rock" src="https://raw.githubusercontent.com/MarcoMarvin/ProfessionalWrestlingDictionary/main/SBA%20School/Sonpage/S.5/punch/PKBP/1.png">
         let choice = document.createElement("img");
         choice.id = choices[i];
         choice.src = choices[i] + ".png";
