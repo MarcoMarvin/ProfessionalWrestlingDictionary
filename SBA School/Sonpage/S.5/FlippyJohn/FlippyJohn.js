@@ -49,7 +49,7 @@ window.onload = function() {
 
     //load images
     birdImg = new Image();
-    birdImg.src = "./flappybird.png";
+    birdImg.src = "https://marcomarvin.github.io/ProfessionalWrestlingDictionary/SBA%20School/Sonpage/S.5/FlippyJohn/fj.png";
     birdImg.onload = function() {
         context.drawImage(birdImg, bird.x, bird.y, bird.width, bird.height);
     }
